@@ -16,10 +16,10 @@ public class FirebaseConfig {
     public void init() throws IOException {
         if (FirebaseApp.getApps().isEmpty()) {
             FirebaseOptions options = FirebaseOptions.builder()
-                    .setCredentials(GoogleCredentials.fromStream(
-                            new ClassPathResource("chat-buddy-263-firebase.json").getInputStream()
-                    ))
-                    .build();
+                .setCredentials(GoogleCredentials.fromStream(
+                    new ClassPathResource("chat-buddy-263.json").getInputStream()
+                ))
+                .build();
 
             FirebaseApp.initializeApp(options);
         }
